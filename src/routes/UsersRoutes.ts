@@ -6,9 +6,9 @@ const usersRoutes = Router();
 const controller = new UsersController();
 
 usersRoutes.get('/list', controller.list);
-usersRoutes.post('/', controller.create);
-usersRoutes.get('/:id', controller.show);
-usersRoutes.put('/:id', controller.update);
-usersRoutes.delete('/:id', controller.delete);
+usersRoutes.post('/create', controller.create);
+usersRoutes.get('/show/:id', controller.show);
+usersRoutes.delete('/delete/:id', controller.delete);
+usersRoutes.put('/update/:id', controller.update);
 
 export { usersRoutes };
